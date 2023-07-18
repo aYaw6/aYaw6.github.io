@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .fan{
+      width: 280px;
+      height: 280px;
+      border: 10px solid #333333;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    .leaves{
+      width: 60px;
+      height: 60px;
+      background-color: #333333;
+      border-radius: 50%;
+      /* transition: all 60s ease-in-out; */
+      animation: open 0.1s infinite linear;
+    }
+    .leaf{
+      width: 60px;
+      height: 124px;
+      background-color: #6A6AEB;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%; 
+      left: 50%;
+      margin-left: -30px;
+      margin-top: -62px;
+      z-index: -1;
+    }
+    .leaf1{
+      transform: translateY(-62px);
+    }
+    .leaf2{
+      transform: rotate(120deg) translateY(-62px);
+    }
+    .leaf3{
+      transform: rotate(-120deg) translateY(-62px);
+    }
+    /* .fan:hover .leaves{
+      transform: rotate(72000deg);
+    }  */
+    @keyframes open{
+      0%{
+        transform: rotate(0deg);
+      }
+      100%{
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="fan">
+    <div class="leaves">
+      <div class="leaf leaf1"></div>
+      <div class="leaf leaf2"></div>
+      <div class="leaf leaf3"></div>
+    </div>
+  </div>
+</body>
+</html>
